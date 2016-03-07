@@ -8,3 +8,6 @@ tar -xvf <file name> for .tar
 tar -xzvf <file name> for .tar.gz
 
 wget <url>
+
+#delete the file content
+> filename
