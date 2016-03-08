@@ -6,6 +6,10 @@ git init 			// initialize the local directory as a Git repository.
 
 git add . 			// Adds the files in the local repo and stages them for commit. 
 
+#There may be problem for adding. fatal: Unable to create '/Users/wilsonli/Dropbox/University/UCSD/.git/index.lock': File exists.
+
+#Solution delete ./git/index.lock file.
+
 git commit -m "message" 	// commit project files.
 
 then copy the repo link from online.
