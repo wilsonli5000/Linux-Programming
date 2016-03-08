@@ -14,4 +14,11 @@ wget <url>
 
 #run iinstruction in background without hangup
 nohug <instruction> > <outputfile> 2&1> & #note the last symbole is &
+
+#push the current working directory into memory for return
+pushd <pathofdir>
+
+#pop back to teh previous working directory
+popd
+
  
