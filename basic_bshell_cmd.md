@@ -11,3 +11,7 @@ wget <url>
 
 #delete the file content
 > filename
+
+#run iinstruction in background without hangup
+nohug <instruction> > <outputfile> 2&1> & #note the last symbole is &
+ 
