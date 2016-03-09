@@ -26,7 +26,10 @@ git status			// display the status of the repo
 
 git diff <filename>		// show the last modification content
 
-git log				// search the history of the repo, to make the output prettier, use --pretty=onleline 
+git log				// search the history of the repo, to make the output prettier, use --pretty=onleline.
+
+git log --graph --pretty=oneline --abbrev-commit
+				// this will show the graph and the abbreviate the commit. 
 
 git reset --hard HEAD^		// reset the repo to previous versions. HEAD represents teh current version, HEAD^ represents previous version, HEAD^^ represents previous second version, for more previous versions, use HEAD~100.
 
@@ -50,10 +53,50 @@ git checkout -- file		// recover the deleted file from repo to local
 
 //remote repo: Git uses ssh protocol for encryption. The private key and the public key are in ~/.ssh dir. .pub file is the public key. Githuub is the web providing remote repo service for Git.
 
-//here can add local git repo to a remote empty repo on Github. 
+git remote add origin <newrepourl>
+				// here can add local git repo to a remote empty repo on Github.
 
-git remote add origin git@github.com:wilsonli5000/reponame.git
+git push -u origin master
 
+//use branch:
 
+git checkout -b <branchname> 	// create a new branch with a name
 
+git branch 			// check what are current branches
+
+git merge <branchname>		// merge the branch with master
+
+git merge --no--ff -m "commit message" <branch name>
+				// this will force quit Fast -Forward merge mode. in this normalmode, we can see merge history in log. In Fast-Forward, no merge history in log.
+
+git branch -d dev 		// delete the unused branch
+
+//fix a sudden bug: when the current work is not finished and find a sudden bug, first save the current workspace. then after fixing the bug retrieve the workspace and delete the stored version.
+
+git stash 			// store the current work space.
+
+git stash list 			// check what work space has been stored.
+
+git stash pop			// retrieve the workspace and delete it.
+
+git stash apply stash@{<number>}
+				// retrieve the specific work space.
+
+git stash drop 			// delete the stored wprk space.
+
+//use tag:
+
+git tag <name>			// tag a commit in a branch.
+
+git tag <name> <commit ID>	// tag a previous commit.
+
+git show <tagname>		// show the description of a tag.
+
+git tag -d <tagnname>		// delete a tag.
+
+git push origin <tagname> 	// push a tag to repo.
+
+git push origin --tags		// push all the tags.
+
+//create Git server: http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000
 
