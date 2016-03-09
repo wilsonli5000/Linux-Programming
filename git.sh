@@ -4,7 +4,7 @@
 git add -A
 
 #commit with a defult message
-echo "Default message: Commit by Wilson Li"
+echo "Default message: $1"
 git commit -m $1
 
 #push 
