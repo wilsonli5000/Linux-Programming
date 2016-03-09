@@ -21,3 +21,17 @@ git remote -v 			// verifies the new remote URL.
 git pull origin master 		// if there exists files, first pull.
 
 git push origin master		// push all files to Git.
+
+git status			// display the status of the repo
+
+git diff <filename>		// show the last modification content
+
+git log				// search the history of the repo, to make the output prettier, use --pretty=onleline 
+
+git reset --hard HEAD^		// reset the repo to previous versions. HEAD represents teh current version, HEAD^ represents previous version, HEAD^^ represents previous second version, for more previous versions, use HEAD~100.
+
+git resetn --hard <commit ID>	// to reset future versions, type part of the commit ID of the repo. commit ID can be found through git log.
+
+git reflog			// if the current terminal is closed, to find the commit ID, use this.
+
+
