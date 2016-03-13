@@ -17,7 +17,7 @@ git remote add origin <repo link>
 
 git remote -v 			// verifies the new remote URL.
 
-#There may be 403 error when trying to connect with git. USe git remote set-url <url> to solve the problem.
+#There may be 403 error when trying to connect with git. Use git remote set-url origin <url> to solve the problem.
 
 git pull origin master 		// if there exists files, first pull.
 
