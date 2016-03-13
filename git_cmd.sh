@@ -12,11 +12,12 @@ git add . 			// Adds the files in the local repo and stages them for commit.
 
 git commit -m "message" 	// commit project files.
 
-then copy the repo link from online.
-
 git remote add origin <repo link>
+				//then copy the repo link from online.
 
 git remote -v 			// verifies the new remote URL.
+
+#There may be 403 error when trying to connect with git. USe git remote set-url <url> to solve the problem.
 
 git pull origin master 		// if there exists files, first pull.
 
